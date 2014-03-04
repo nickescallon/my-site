@@ -5,6 +5,9 @@ var routes = require('./app/routes/routes.js');
 
 var app = express();
 
+app.use(express.static(path.join(__dirname, '/../public')));
+app.use(app.router);
+
 app.set('port', 8888);
 routes(app);
 
