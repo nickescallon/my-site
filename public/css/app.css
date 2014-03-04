@@ -10,6 +10,7 @@ body {
   height: 35px;
   border-bottom: 1px solid white;
   background-color: rgba(24, 21, 21, 0.8);
+  font-family: 'Audiowide', cursive;
 }
 
 .logo {
@@ -34,6 +35,7 @@ body {
 }
 .contact > li > a {
   color: white;
+  text-decoration: none;
 }
 .contact > li:before {
   content: "|";
