@@ -48,13 +48,15 @@
     $(document).ready(function(){
       $(".head").hide();
       $(".border").hide();
-      $(".head").slideDown(1000);
-      $("#rightbar").show();
-      $("#rightbar").animate({height: "100%"},750,
-        function(){
-          $("#footerbar").show();
-          $("#footerbar").animate({width: "100%"},750);
+      $(".head").slideDown(750, function(){
+        $("#rightbar").show();
+        $("#rightbar").animate({height: "100%"},750,
+          function(){
+            $("#footerbar").show();
+            $("#footerbar").animate({width: "100%"},750);
+          });
       });
+      
     });
   </script>
 </body>
