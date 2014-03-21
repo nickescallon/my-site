@@ -14,6 +14,8 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "angular": "~1.2.14",
-    "angular-route": "~1.2.14"
+    "angular-route": "~1.2.14",
+    "d3": "~3.4.3",
+    "d3-tip": "~0.6.4"
   }
 }
