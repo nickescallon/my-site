@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background: #181515;
-  background-color: white;
+  /*background-color: white;*/
 }
 
 .head {
@@ -173,14 +173,15 @@ body {
 
 .border { 
   position: absolute;
+  /*opacity: .5;*/
 }
 
 .borderh {
   height: 0px;
-  border-top: 1px solid black;
+  border-top: 1px solid white;
 }
 
 .borderv { 
   width: 0px;
-  border-right: 1px solid black; 
+  border-right: 1px solid white; 
 }

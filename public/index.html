@@ -23,7 +23,7 @@
   <div class="main-container">
     <div class="sidebar">
       <div class="border borderv" id="rightbar"></div>
-      <div class="menu-item" ng-repeat="item in menu">{{item}}</div>
+      <div class="menu-item" ng-repeat="item in menu"><a href="/resume">{{item}}</a></div>
     </div><div class="content" ng-view></div>
   </div>
 
@@ -46,12 +46,16 @@
     $(document).ready(function(){
       $(".head").hide();
       $(".border").hide();
+      $(".menu-item").hide();
       $(".head").slideDown(1000, function(){
         $("#rightbar").show();
         $("#rightbar").animate({height: "100%"},1000,
           function(){
             $("#footerbar").show();
-            $("#footerbar").animate({width: "100%"},1000);
+            $("#footerbar").animate({width: "100%"},1000,
+              function() {
+                $(".menu-item").fadeIn();
+              });
           });
       });
       

@@ -6,10 +6,10 @@ angular.module('myApp', ['ngRoute'])
         templateUrl: 'templates/partial1.html',
          controller: 'HomeController'
        })
-      // .when('/view2', {
-      //   templateUrl: 'templates/partial2.html',
-      //    controller: 'MyCtrl2'
-      //  })
+      .when('/resume', {
+        templateUrl: 'templates/partial2.html',
+         controller: 'ResumeController'
+       })
       .otherwise({
         redirectTo: '/'
       });
