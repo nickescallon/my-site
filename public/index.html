@@ -6,7 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
-<body>
+<body ng-controller="FrameController">
   <nav class="head">
     <div class="logo">
       <a href="/">Nick Escallon</a>
@@ -23,10 +23,7 @@
   <div class="main-container">
     <div class="sidebar">
       <div class="border borderv" id="rightbar"></div>
-      <ul class="menu">
-        <li><a href="/view1">view1</a></li>
-        <li><a href="/view2">view2</a></li>
-      </ul>
+      <div class="menu-item" ng-repeat="item in menu">{{item}}</div>
     </div><div class="content" ng-view></div>
   </div>
 
@@ -41,19 +38,20 @@
   <script src="components/angular-route/angular-route.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
+  <script src="js/HomeController.js"></script>
+  <script src="js/FrameController.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
   <script>
     $(document).ready(function(){
       $(".head").hide();
       $(".border").hide();
-      $(".head").slideDown(750, function(){
+      $(".head").slideDown(1000, function(){
         $("#rightbar").show();
-        $("#rightbar").animate({height: "100%"},750,
+        $("#rightbar").animate({height: "100%"},1000,
           function(){
             $("#footerbar").show();
-            $("#footerbar").animate({width: "100%"},750);
+            $("#footerbar").animate({width: "100%"},1000);
           });
       });
       

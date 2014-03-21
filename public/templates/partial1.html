@@ -1,10 +1,59 @@
 <div class="med-container">
-  <div class="small-container top left"></div>
-  <div class="small-container top right"></div>
+  <div class="small-container top left">
+    <div class="border borderv" id="top-left-rightbar"></div>
+    <div class="border borderh" id="top-left-bottombar"></div>
+  </div>
+  <div class="small-container top right">
+    <div class="border borderv" id="top-right-leftbar"></div>
+    <div class="border borderh" id="top-right-bottombar"></div>
+  </div>
 </div>
 
 <div class="med-container">
-  <div class="small-container bottom left"></div>
-  <div class="small-container bottom right"></div>
+  <div class="small-container bottom left">
+    <div class="border borderv" id="bottom-left-rightbar"></div>
+    <div class="border borderh" id="bottom-left-topbar"></div>
+  </div>
+  <div class="small-container bottom right">
+    <div class="border borderv" id="bottom-right-leftbar"></div>
+    <div class="border borderh" id="bottom-right-topbar"></div>
+  </div>
 </div>
+
+<script>
+    var draw = function(){
+      $(".border").hide();
+      $("#top-left-rightbar").show();
+      $("#top-left-rightbar").animate({height: "100%"},750,
+        function() {
+          $("#top-left-bottombar").show();
+          $("#top-left-bottombar").animate({width: "100%"},750,
+            function() {
+              $("#bottom-left-rightbar").show();
+              $("#bottom-left-rightbar").animate({height: "100%"},750,
+                function() {
+                  $("#bottom-left-topbar").show();
+                  $("#bottom-left-topbar").animate({width: "100%"},750);
+              });
+          });    
+      });
+
+      $("#bottom-right-leftbar").show();
+      $("#bottom-right-leftbar").animate({height: "100%"},750,
+        function() {
+          $("#bottom-right-topbar").show();
+          $("#bottom-right-topbar").animate({width: "100%"},750,
+            function() {
+              $("#top-right-leftbar").show();
+              $("#top-right-leftbar").animate({height: "100%"},750,
+                function() {
+                  $("#top-right-bottombar").show();
+                  $("#top-right-bottombar").animate({width: "100%"},750);
+              });
+          });
+      });
+
+
+    }();
+</script>
 
