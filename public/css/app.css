@@ -2,6 +2,8 @@
 body {
   margin: 0;
   background: #181515;
+  font-family: 'Audiowide', cursive;
+  color: white;
   /*background-color: white;*/
 }
 
@@ -11,12 +13,10 @@ body {
   width: 100%;
   height: 35px;
   border-bottom: 1px solid white;
-  background-color: rgba(24, 21, 21, 0.8);
-  font-family: 'Audiowide', cursive;
+  /*background-color: rgba(24, 21, 21, 0.8);*/
 }
 
 .logo {
-  color: white;
   font-weight: bold;
   float: left;
   padding-left: 5px;
@@ -72,6 +72,7 @@ body {
 
 .menu-item {
   padding: 10px 15px;
+  font-size: .75em;
   text-align: center;
 }
 
@@ -83,6 +84,8 @@ body {
   /*padding-top: 2%;
   padding-bottom: 2%;*/
   position:relative;
+  -webkit-transition:background 2s;
+  -moz-transition:background 2s;
 }
 
 .med-container {
@@ -100,23 +103,35 @@ body {
   display: inline-block;
   margin-left: 0.5%;
   margin-right: 0.5%;
+  overflow: hidden;
 }
 
-/*.top {
-  border-bottom: 1px solid black;
+.small-container > img {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  -webkit-transition:-webkit-transform 1s;
+  -moz-transition:-moz-transform 1s;
+}
+.small-container > img:hover {
+  transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  -webkit-transition: 1s;
+  -moz-transform: scale(1.2, 1.2);
+  -moz-transition: 1s;
 }
 
-.left {
-  border-right: 1px solid black;
+.bottom > img {
+  top: 2px;
 }
 
-.right {
-  border-left: 1px solid black;
+.left > img {
+  right: 2px;
 }
 
-.bottom {
-  border-top: 1px solid black;
-}*/
+.right > img {
+  left: 2px;
+}
 
 .footer {
   position: fixed;
@@ -173,6 +188,7 @@ body {
 
 .border { 
   position: absolute;
+  z-index: 99;
   /*opacity: .5;*/
 }
 
