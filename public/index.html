@@ -7,20 +7,31 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body ng-controller="FrameController">
-  <nav class="head">
+ <!--  <nav class="head">
     <div class="logo">
       <a href="/">Nick Escallon</a>
     </div>
-    <!-- <div class="contact"> -->
+
       <ul class="contact">
         <li><a href="mailto:nickescallon@gmail.com">e-mail</a></li>
         <li><a href="http://www.github.com/nickescallon">github</a></li>
         <li><a href="http://www.linkedin.com/pub/nick-escallon/5/248/9b4">linkedIn</a></li>
       </ul>
-    <!-- </div>  -->
-  </nav>
 
-  <div class="main-container">
+  </nav> -->
+  <div id="top-page">
+  </div>
+  <div id="banner">
+    <div id="menu">
+      <span>ABOUT</span>
+      <span>PROJECTS</span>
+      <span>RESUME</span>
+    </div> 
+  </div>
+  <div id="bottom-page">
+  </div>
+
+  <!-- <div class="main-container">
     <div class="sidebar">
       <div class="border borderv" id="rightbar"></div>
       <div class="menu-item" ng-repeat="item in menu">{{item}}</div>
@@ -31,7 +42,7 @@
     <div class="footer-content">
       <div class="border borderh" id="footerbar"></div>
     </div>
-  </footer>
+  </footer> -->
   
   <script src="components/d3/d3.min.js"></script>
   <script src="components/d3-tip/index.js"></script>
@@ -44,24 +55,6 @@
   <script src="js/FrameController.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
-  <script>
-    $(document).ready(function(){
-      $(".head").hide();
-      $(".border").hide();
-      $(".menu-item").hide();
-      $(".head").slideDown(1000, function(){
-        $("#rightbar").show();
-        $("#rightbar").animate({height: "100%"},1000,
-          function(){
-            $("#footerbar").show();
-            $("#footerbar").animate({width: "100%"},1000,
-              function() {
-                $(".menu-item").fadeIn();
-              });
-          });
-      });
-      
-    });
   </script>
 </body>
 </html>

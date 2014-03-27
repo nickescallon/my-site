@@ -1,251 +1,52 @@
-/* app css stylesheet */
 body {
   margin: 0;
-  background: #181515;
-  font-family: 'Audiowide', cursive;
-  color: white;
-  /*background-color: white;*/
-}
-
-.head {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 35px;
-  border-bottom: 1px solid white;
-  /*background-color: rgba(24, 21, 21, 0.8);*/
-}
-
-.logo {
-  font-weight: bold;
-  float: left;
-  padding-left: 5px;
-  height: 35px;
-  line-height: 35px;
-}
-.logo > a {
-  color: white;
-  text-decoration: none;
-}
-
-.contact {
-  float: right;
-  padding-right: 5px;
-  margin: 0;
-  list-style: none;
-  line-height: 35px;
-}
-.contact > li {
-  display: inline;
-  padding-right: .3em;
-}
-.contact > li > a {
-  color: white;
-  text-decoration: none;
-}
-.contact > li:before {
-  content: "|";
-  color: white;
-  padding-right: 0.5em;
-}.contact > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
-
-.main-container {
-  padding: 35px 0 20px;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.sidebar {
-  position: relative;
-  width: 15%;
-  height: 100%;
-  /*background-color: red;*/
-  display: inline-block;
-  vertical-align: top;
-}
-
-.menu-item {
-  padding: 10px 15px;
-  font-size: .75em;
-  text-align: center;
-}
-
-.content {
-  width: 85%;
-  height: 100%;
-  display: inline-block;
-  /*background-color: blue;*/
-  /*padding-top: 2%;
-  padding-bottom: 2%;*/
-  position:relative;
-  -webkit-transition:background 2s;
-  -moz-transition:background 2s;
-}
-
-.med-container {
-  position: relative;
-  width: 100%;
-  height: 50%;
-  text-align: center;
-}
-
-.small-container {
-  position: relative;
-  top: 2.5%;
-  height: 95%;
-  width: 45%;
-  display: inline-block;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-  overflow: hidden;
-}
-
-.small-container > img {
-  position: absolute;
-  width: 99%;
-  height: 99%;
-  -webkit-transition:-webkit-transform 1s;
-  -moz-transition:-moz-transform 1s;
-}
-.small-container > img:hover {
-  transform: scale(1.2, 1.2);
-  -webkit-transform: scale(1.2, 1.2);
-  -webkit-transition: 1s;
-  -moz-transform: scale(1.2, 1.2);
-  -moz-transition: 1s;
-}
-
-.bottom > img {
-  top: 2px;
-}
-
-.left > img {
-  right: 2px;
-}
-
-.right > img {
-  left: 2px;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 20px;
-}
-
-.footer-content {
-  position: relative;
-  width: 100%;
-  height: 20px;
-}
-
-#top-left-rightbar {
-  right: 0px; top: 0px;
-}
-
-#top-left-bottombar {
-  right: 0px; bottom: 0px;
-}
-
-#top-right-leftbar {
-  left: 0px; top: 0px;
-}
-
-#top-right-bottombar {
-  left: 0px; bottom: 0px;
-}
-
-#bottom-left-rightbar {
-  right: 0px; bottom: 0px;
-}
-
-#bottom-left-topbar {
-  right: 0px; top: 0px;
-}
-
-#bottom-right-leftbar {
-  left: 0px; bottom: 0px;
-}
-
-#bottom-right-topbar {
-  left: 0px; top: 0px;
-}
-
-#rightbar {
-  right: 0px; top: 0px;
-}
-
-#footerbar {
-  left: 0px; top: 0px;
-}
-
-.border { 
-  position: absolute;
-  z-index: 99;
-  /*opacity: .5;*/
-}
-
-.borderh {
-  height: 0px;
-  border-top: 1px solid white;
-  box-shadow: 0 0 15px white;
-}
-
-.borderv { 
-  width: 0px;
-  border-right: 1px solid white; 
-  box-shadow: 0 0 15px white;
-}
-
-/*FOR HRCONNECT FORCE GRAPH*/
-.node {
-  stroke: #fff;
-  stroke-width: 1px;
-  fill-opacity: .8;
-}
-
-.link {
-  stroke: white;
-  stroke-opacity: .6;
-}
-
-
-.d3-tip {
+  font-size: 12px;
   font-family: arial;
-  line-height: 1;
-  padding: 12px;
-  background: rgba(0, 0, 0, 1);
-  color: #fff;
-  border-radius: 2px;
 }
 
-.d3-tip span{
-  color: red;
+img {
+  height: 20em;
+  width: 20em;
+  -webkit-transition: 2s;
+  border: 1px solid white;
+  border-radius: 50%;
 }
 
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
+img:hover {
+  -webkit-transform: scale(2);
+  -webkit-transition: 2s;
+}
+
+#top-page {
+  height: 80vh;
+  width: 100vw;
+  background: black;
+}
+
+#banner {
+  height: 20vh;
+  width: 100vw;
+  background: yellow;
+}
+
+#bottom-page {
+  height: 80vh;
+  width: 100vw;
+  background: black;
+}
+
+#menu {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
   text-align: center;
+  top: 5vh;
+  left: 10vw;
+  height: 10vh;
+  width: 80vw;
 }
-
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
+#menu > span {
+  color: white;
+  font-size: 7vh;
+  padding: 0px 5vw;
 }

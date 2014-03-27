@@ -1,4 +1,12 @@
-<div class="med-container">
+<div id="top-page">
+</div>
+<div id="bottom-page">
+</div>
+
+
+
+
+<!-- <div class="med-container">
   <div class="small-container top left">
     <div class="border borderv" id="top-left-rightbar"></div>
     <div class="border borderh" id="top-left-bottombar"></div>
@@ -22,47 +30,6 @@
     <div class="border borderh" id="bottom-right-topbar"></div>
     <img src="./images/connectMe.png">
   </div>
-</div>
+</div> -->
 
-<script>
-    var draw = function(){
-       $("img").hide();
-      $("#top-left-rightbar").show();
-      $("#top-left-rightbar").animate({height: "100%"},750,
-        function() {
-          $("#top-left-bottombar").show();
-          $("#top-left-bottombar").animate({width: "100%"},750,
-            function() {
-              $("#bottom-left-rightbar").show();
-              $("#bottom-left-rightbar").animate({height: "100%"},750,
-                function() {
-                  $("#bottom-left-topbar").show();
-                  $("#bottom-left-topbar").animate({width: "100%"},750);
-              });
-          });    
-      });
-
-      $("#bottom-right-leftbar").show();
-      $("#bottom-right-leftbar").animate({height: "100%"},750,
-        function() {
-          $("#bottom-right-topbar").show();
-          $("#bottom-right-topbar").animate({width: "100%"},750,
-            function() {
-              $("#top-right-leftbar").show();
-              $("#top-right-leftbar").animate({height: "100%"},750,
-                function() {
-                  $("#top-right-bottombar").show();
-                  $("#top-right-bottombar").animate({width: "100%"},750,
-                    function() {
-                      $("img").fadeIn(1000);
-                      $(".content").css("background", "white");
-                      $(".border").hide();
-                  });
-              });
-          });
-      });
-
-
-    }();
-</script>
 
