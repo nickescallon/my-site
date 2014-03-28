@@ -29,8 +29,8 @@
       var g = svg.append("g");
 
       var text = svg.append("text")
-        .attr("x", w * .1)
-        .attr("y", h)
+        .attr("x", 15)
+        .attr("y", h-5)
         .attr("font-size", w/10)
         .attr("fill", "black")
         .text("NICK ESCALLON");
@@ -56,10 +56,10 @@
             .remove();
         });
 
-        setTimeout(function() {
-          text.transition().duration(8000)
+        // setTimeout(function() {
+          text.transition().duration(10000)
             .attr("fill", "white");
-        }, 1000)
+        // }, 1000)
 
       }();
 
