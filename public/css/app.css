@@ -1,6 +1,17 @@
+@media (min-width: 320px){
+  html{
+    font-size:3px;
+  }
+}
+
+@media (min-width: 600px){
+  html{
+    font-size: 5px;    
+  }
+}
+
 body {
   margin: 0;
-  font-size: 12px;
   font-family: arial;
 }
 
@@ -47,6 +58,7 @@ img:hover {
 }
 #menu > span {
   color: white;
-  font-size: 3vw;
+  font-size: 5rem;
   padding: 0px 5vw;
+  text-shadow: 1px 1px 1px black;
 }
