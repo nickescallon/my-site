@@ -26,11 +26,13 @@
         .attr("height", h)
         .attr("width", w);
 
+      var g = svg.append("g");
+
       var text = svg.append("text")
         .attr("x", w * .1)
-        .attr("y", h/2)
+        .attr("y", h)
         .attr("font-size", w/10)
-        .attr("fill", "white")
+        .attr("fill", "black")
         .text("NICK ESCALLON");
 
 // <text x="20" y="20" font-family="sans-serif" font-size="20px" fill="red">Hello!</text>
@@ -38,27 +40,33 @@
 
       var render = function() {
 
-        var lines = svg.selectAll('.lines').data(data);
+        var lines = g.selectAll('.lines').data(data);
 
         lines.enter()
           .append("circle")
             .attr("cx", function(d,i) {return Math.random() * w})
             .attr("cy", 0)
             .attr("r", 3)
-            .style({"stroke": "rgb(6,120,155)", "stroke-width" : 2})
+            .attr("fill", "rgb(6,120,155)");
+            // .style({"stroke": "rgb(6,120,155)", "stroke-width" : 2})
 
         lines.each(function(d,i) {
-          d3.select(this).transition().duration(2000).delay(Math.random() * 4000).ease("bounce")
+          d3.select(this).transition().duration(4000).delay(Math.random() * 4000).ease("bounce")
             .attr("cy", h)
             .remove();
         });
 
-      };
+        setTimeout(function() {
+          text.transition().duration(8000)
+            .attr("fill", "white");
+        }, 1000)
 
-      setInterval(function(){
-        render();
-        console.log('yes');
-      }, 4000);
+      }();
+
+      // setInterval(function(){
+      //   render();
+      //   console.log('yes');
+      // }, 2000);
     </script>
   </div>
   <div id="banner">
