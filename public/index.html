@@ -5,21 +5,61 @@
   <title>Nick Escallon</title>
   <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/app.css"/>
+  <script src="components/d3/d3.min.js"></script>
 </head>
 <body ng-controller="FrameController">
- <!--  <nav class="head">
-    <div class="logo">
-      <a href="/">Nick Escallon</a>
-    </div>
 
-      <ul class="contact">
-        <li><a href="mailto:nickescallon@gmail.com">e-mail</a></li>
-        <li><a href="http://www.github.com/nickescallon">github</a></li>
-        <li><a href="http://www.linkedin.com/pub/nick-escallon/5/248/9b4">linkedIn</a></li>
-      </ul>
-
-  </nav> -->
   <div id="top-page">
+    <script>
+      var h = window.innerHeight * .9;
+      var w = window.innerWidth;
+      var x1 = 10;
+      var y1 = 10;
+      var x2 = 25;
+      var y2 = 10;
+      var xVar = 320;
+      var maxItems = 520;
+      var data = d3.range(maxItems);
+      var count = 0;
+
+      var svg = d3.select("#top-page").append("svg")
+        .attr("height", h)
+        .attr("width", w);
+
+      var text = svg.append("text")
+        .attr("x", w * .1)
+        .attr("y", h/2)
+        .attr("font-size", w/10)
+        .attr("fill", "white")
+        .text("NICK ESCALLON");
+
+// <text x="20" y="20" font-family="sans-serif" font-size="20px" fill="red">Hello!</text>
+// 5</svg>
+
+      var render = function() {
+
+        var lines = svg.selectAll('.lines').data(data);
+
+        lines.enter()
+          .append("circle")
+            .attr("cx", function(d,i) {return Math.random() * w})
+            .attr("cy", 0)
+            .attr("r", 3)
+            .style({"stroke": "rgb(6,120,155)", "stroke-width" : 2})
+
+        lines.each(function(d,i) {
+          d3.select(this).transition().duration(2000).delay(Math.random() * 4000).ease("bounce")
+            .attr("cy", h)
+            .remove();
+        });
+
+      };
+
+      setInterval(function(){
+        render();
+        console.log('yes');
+      }, 4000);
+    </script>
   </div>
   <div id="banner">
     <div id="menu">
@@ -31,20 +71,7 @@
   <div id="bottom-page">
   </div>
 
-  <!-- <div class="main-container">
-    <div class="sidebar">
-      <div class="border borderv" id="rightbar"></div>
-      <div class="menu-item" ng-repeat="item in menu">{{item}}</div>
-    </div><div class="content" ng-view></div>
-  </div>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="border borderh" id="footerbar"></div>
-    </div>
-  </footer> -->
-  
-  <script src="components/d3/d3.min.js"></script>
   <script src="components/d3-tip/index.js"></script>
   <script src="components/jquery/dist/jquery.min.js"></script>
   <script src="components/angular/angular.js"></script>
