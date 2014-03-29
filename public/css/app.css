@@ -28,6 +28,11 @@ img:hover {
   -webkit-transition: 2s;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 #top-page {
   height: 90vh;
   width: 100vw;
