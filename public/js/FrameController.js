@@ -1,9 +1,9 @@
 angular.module('myApp')
   .controller('FrameController', function ($scope, $location, $anchorScroll) {
     $scope.menu = [
-      "Projects",
-      "Resume",
-      "About"
+      "ABOUT",
+      "PROJECTS",
+      "RESUME"
     ];
 
     $scope.dropCount = 520;
