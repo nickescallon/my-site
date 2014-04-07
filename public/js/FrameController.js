@@ -7,6 +7,6 @@ angular.module('myApp')
     ];
 
     $scope.dropCount = 520;
-    $scope.dropSize = 2;
+    $scope.dropSize = 3;
     $scope.title = "Nick Escallon";
   });

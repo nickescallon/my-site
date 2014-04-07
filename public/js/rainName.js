@@ -1,8 +1,3 @@
-'use strict';
-
-/* Directives */
-
-
 angular.module('myApp')
   .directive('rainName', function() {
     return {
@@ -16,11 +11,8 @@ angular.module('myApp')
         var w = element[0].parentNode.clientWidth;
         var h = element[0].parentNode.clientHeight;
         var dropSize = scope.dropSize || 3;
-        console.log(scope.dropSize);
-        console.log(scope.title)
+        var dropCount = scope.dropCount || 200;
         var title = scope.title || 'pass in text';
-
-        var dropCount = scope.dropCount || 200; //Allow this to be passed in from the scope
         var data = d3.range(dropCount);
 
         var svg = d3.select(element[0]).append('svg')
@@ -34,7 +26,7 @@ angular.module('myApp')
           .attr('y', h-5)
           .attr('font-size', w/10)
           .attr('fill', 'black')
-          .text(title); //Allow this text to be passed in from the scope
+          .text(title); 
 
         var render = function() {
           var drops = g.selectAll('.drops').data(data);
@@ -42,7 +34,7 @@ angular.module('myApp')
           drops.enter().append('circle')
             .attr('cx', function(d,i) { return Math.random() * w })
             .attr('cy', 0)
-            .attr('r', dropSize) // Make this a varaible - maybe pass it in from scope
+            .attr('r', dropSize)
             .attr('fill', 'rgb(6,120,155)');
 
           drops.each(function(d,i) {
@@ -56,7 +48,7 @@ angular.module('myApp')
             .attr("fill", "white");
         }();
 
-        //USED MIKE BOSTOCK'S CUSTOM VARIABLE BOUNCE FUNC FROM: 
+        //USED MIKE BOSTOCK'S CUSTOM VARIABLE BOUNCE FUNCTION FROM: 
         //http://bl.ocks.org/mbostock/5743979/e5775a5251d93c73a8491cb7fca825b0a07792cf
         function bounce(h) {
           if (!arguments.length) h = 0.25;
