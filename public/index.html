@@ -13,12 +13,13 @@
   </div>
   <div id="banner">
     <div id="menu">
-      <span><a href="#bottom-page">ABOUT</a></span>
+      <span><a ng-click="scrollTo('bottom-page')">ABOUT</a></span>
       <span><a href="#bottom-page">PROJECTS</a></span>
       <span><a href="#bottom-page">RESUME</a></span>
     </div> 
   </div>
   <div id="bottom-page">
+    <div ng-view></div>
   </div>
 
 
