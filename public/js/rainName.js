@@ -48,6 +48,21 @@ angular.module('myApp')
             .attr("fill", "white");
         }();
 
+        var resize = function() {
+          var w = element[0].parentNode.clientWidth;
+          var h = element[0].parentNode.clientHeight;
+
+          svg
+            .attr('height', h)
+            .attr('width', w);
+
+          text
+            .attr('y', h-5)
+            .attr('font-size', w/10);
+        };
+
+        window.onresize = resize;
+
         //USED MIKE BOSTOCK'S CUSTOM VARIABLE BOUNCE FUNCTION FROM: 
         //http://bl.ocks.org/mbostock/5743979/e5775a5251d93c73a8491cb7fca825b0a07792cf
         function bounce(h) {
