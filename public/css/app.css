@@ -43,6 +43,7 @@ a {
   height: 10vh;
   width: 100vw;
   background: black;
+  border-bottom: 1px solid rgb(6,120,155);
 }
 
 #bottom-page {
@@ -65,5 +66,12 @@ a {
   color: white;
   font-size: 5rem;
   padding: 0px 5vw;
-  text-shadow: 1px 1px 1px black;
+  /*text-shadow: 1px 1px 1px black;*/
+ /* text-shadow: 1px 1px 30px rgb(6,120,155);*/
+}
+
+#about {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
 }
