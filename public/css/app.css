@@ -73,7 +73,8 @@ a:hover {
  /* text-shadow: 1px 1px 30px rgb(6,120,155);*/
 }
 
-#about {
+article {
+  padding-top: 20px;
   color: white;
   text-align: center;
   font-size: 4rem;
