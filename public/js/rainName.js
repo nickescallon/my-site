@@ -51,6 +51,7 @@ angular.module('myApp')
 
         render(h,w);
 
+        //TODO: Throttle this function
         var resize = function() {
           var w = element[0].parentNode.clientWidth;
           var h = element[0].parentNode.clientHeight;
