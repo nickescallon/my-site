@@ -7,13 +7,21 @@ angular.module('myApp')
   .directive('rainName', function() {
     return {
       restrict: 'E',
-      scope: {},
+      scope: {
+        title: '=',
+        dropSize: '=',
+        dropCount: '='
+      },
       link: function(scope, element) {
         var w = element[0].parentNode.clientWidth;
         var h = element[0].parentNode.clientHeight;
+        var dropSize = scope.dropSize || 3;
+        console.log(scope.dropSize);
+        console.log(scope.title)
+        var title = scope.title || 'pass in text';
 
-        var maxItems = 520; //Allow this to be passed in from the scope
-        var data = d3.range(maxItems);
+        var dropCount = scope.dropCount || 200; //Allow this to be passed in from the scope
+        var data = d3.range(dropCount);
 
         var svg = d3.select(element[0]).append('svg')
           .attr('height', h)
@@ -26,7 +34,7 @@ angular.module('myApp')
           .attr('y', h-5)
           .attr('font-size', w/10)
           .attr('fill', 'black')
-          .text('NICK ESCALLON'); //Allow this text to be passed in from the scope
+          .text(title); //Allow this text to be passed in from the scope
 
         var render = function() {
           var drops = g.selectAll('.drops').data(data);
@@ -34,7 +42,7 @@ angular.module('myApp')
           drops.enter().append('circle')
             .attr('cx', function(d,i) { return Math.random() * w })
             .attr('cy', 0)
-            .attr('r', 3) // Make this a varaible - maybe pass it in from scope
+            .attr('r', dropSize) // Make this a varaible - maybe pass it in from scope
             .attr('fill', 'rgb(6,120,155)');
 
           drops.each(function(d,i) {

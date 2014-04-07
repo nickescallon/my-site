@@ -5,4 +5,8 @@ angular.module('myApp')
       "Resume",
       "About"
     ];
+
+    $scope.dropCount = 520;
+    $scope.dropSize = 2;
+    $scope.title = "Nick Escallon";
   });
