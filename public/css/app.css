@@ -32,6 +32,9 @@ a {
   color: white;
   text-decoration: none;
 }
+a:hover {
+  cursor: pointer;
+}
 
 #top-page {
   height: 90vh;
