@@ -15,7 +15,7 @@ angular.module('myApp')
         var maxItems = 520; //Allow this to be passed in from the scope
         var data = d3.range(maxItems);
 
-        var svg = d3.select(element[0]).append('svg').
+        var svg = d3.select(element[0]).append('svg')
           .attr('height', h)
           .attr('width', w);
 
@@ -32,7 +32,7 @@ angular.module('myApp')
           var drops = g.selectAll('.drops').data(data);
 
           drops.enter().append('circle')
-            .attr('cx', function(d,1) { return Math.random() * w })
+            .attr('cx', function(d,i) { return Math.random() * w })
             .attr('cy', 0)
             .attr('r', 3) // Make this a varaible - maybe pass it in from scope
             .attr('fill', 'rgb(6,120,155)');
@@ -46,7 +46,7 @@ angular.module('myApp')
 
           text.transition().duration(10000)
             .attr("fill", "white");
-        };
+        }();
 
         //USED MIKE BOSTOCK'S CUSTOM VARIABLE BOUNCE FUNC FROM: 
         //http://bl.ocks.org/mbostock/5743979/e5775a5251d93c73a8491cb7fca825b0a07792cf
