@@ -13,7 +13,7 @@
   </div>
   <div id="banner">
     <div id="menu">
-      <span ng-repeat="item in menu"><a ng-click="scrollTo('bottom-page')">{{item}}</a></span>
+      <span ng-repeat="item in menu"><a ng-click="scrollTo('bottom-page', item)">{{item}}</a></span>
       <!-- <span><a href="#bottom-page">PROJECTS</a></span>
       <span><a href="#bottom-page">RESUME</a></span> -->
     </div> 
@@ -28,9 +28,9 @@
   <script src="components/angular/angular.js"></script>
   <script src="components/angular-route/angular-route.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
   <script src="js/HomeController.js"></script>
   <script src="js/FrameController.js"></script>
+  <script src="js/ResumeController.js"></script>
   <script src="js/rainName.js"></script>
   </script>
 </body>

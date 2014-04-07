@@ -1,5 +1,5 @@
 angular.module('myApp')
-  .controller('FrameController', function ($scope, $location, $anchorScroll) {
+  .controller('FrameController', function ($scope, $route, $location, $anchorScroll) {
     $scope.menu = [
       "ABOUT",
       "PROJECTS",
@@ -10,8 +10,10 @@ angular.module('myApp')
     $scope.dropSize = 3;
     $scope.title = "Nick Escallon";
 
-    $scope.scrollTo = function(id) {
-      $location.hash(id);
+    $scope.scrollTo = function(id, target) {
+      // $location.hash(id);
+      console.log(target);
       $anchorScroll();
+      $location.path('/resume');
    };
   });
