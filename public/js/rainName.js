@@ -28,7 +28,8 @@ angular.module('myApp')
           .attr('fill', 'black')
           .text(title); 
 
-        var render = function() {
+        var render = function(h,w) {
+          g.selectAll('circle').remove(); //for resizing
           var drops = g.selectAll('.drops').data(data);
 
           drops.enter().append('circle')
@@ -46,7 +47,9 @@ angular.module('myApp')
 
           text.transition().duration(10000)
             .attr("fill", "white");
-        }();
+        };
+
+        render(h,w);
 
         var resize = function() {
           var w = element[0].parentNode.clientWidth;
@@ -59,6 +62,8 @@ angular.module('myApp')
           text
             .attr('y', h-5)
             .attr('font-size', w/10);
+
+          render(h,w);
         };
 
         window.onresize = resize;
