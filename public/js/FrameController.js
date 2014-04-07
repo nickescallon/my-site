@@ -11,9 +11,9 @@ angular.module('myApp')
     $scope.title = "Nick Escallon";
 
     $scope.scrollTo = function(id, target) {
-      // $location.hash(id);
-      console.log(target);
+      $location.hash(id);
       $anchorScroll();
-      $location.path('/resume');
+      $location.hash('');
+      $location.path('/' + target.toLowerCase());
    };
   });
