@@ -10,10 +10,7 @@ angular.module('myApp')
     $scope.dropSize = 3;
     $scope.title = "Nick Escallon";
 
-    $scope.scrollTo = function(id, target) {
-      $location.hash(id);
-      $anchorScroll();
-      $location.hash('');
+    $scope.goTo = function(target) {
       $location.path('/' + target.toLowerCase());
    };
   });

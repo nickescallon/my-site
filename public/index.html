@@ -13,9 +13,7 @@
   </div>
   <div id="banner">
     <div id="menu">
-      <span ng-repeat="item in menu"><a ng-click="scrollTo('bottom-page', item)">{{item}}</a></span>
-      <!-- <span><a href="#bottom-page">PROJECTS</a></span>
-      <span><a href="#bottom-page">RESUME</a></span> -->
+      <span ng-repeat="item in menu"><a ng-click="goTo(item)">{{item}}</a></span>
     </div> 
   </div>
   <div id="bottom-page">
