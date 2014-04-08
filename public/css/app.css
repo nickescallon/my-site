@@ -9,15 +9,15 @@ body {
 
 img {
  /* height: 20em;*/
-  width: 60%;
-  -webkit-transition: 2s;
-  border: 1px solid white;
+  width: 100%;
+  -webkit-transition: .2s;
+  /*border: 1px solid white;*/
   /*border-radius: 50%;*/
 }
 
 img:hover {
-  -webkit-transform: scale(1.1);
-  -webkit-transition: 1s;
+  -webkit-transform: scale(1.05);
+  -webkit-transition: .3s;
 }
 
 a {
@@ -74,8 +74,12 @@ article {
   font-size: 4rem;
 }
 
-.project {
-
+.project-container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 1px solid rgb(6,120,155);
+  border-right: 1px solid rgb(6,120,155);
 }
 
 @media only screen and (min-width : 320px) and (max-width : 568px){
@@ -83,8 +87,9 @@ article {
     font-size: 3px;    
   }
 
-  img {
+  .project-container {
     width: 100%;
+    border: none;
   }
 
   img:hover {
