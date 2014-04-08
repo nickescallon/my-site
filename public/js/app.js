@@ -6,6 +6,10 @@ angular.module('myApp', ['ngRoute'])
         templateUrl: 'templates/partial1.html',
          controller: 'HomeController'
        })
+      .when('/projects', {
+        templateUrl: 'templates/projects.html',
+        controller: 'ResumeController'
+      })
       .when('/resume', {
         templateUrl: 'templates/partial2.html',
          controller: 'ResumeController'
