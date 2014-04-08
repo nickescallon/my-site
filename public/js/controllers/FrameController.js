@@ -11,6 +11,10 @@ angular.module('myApp')
     $scope.title = "Nick Escallon";
 
     $scope.goTo = function(target) {
+      $location.hash('bottom-page');
+      $anchorScroll();
+      $location.hash('');
+      
       $location.path('/' + target.toLowerCase());
    };
   });
