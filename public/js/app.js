@@ -8,7 +8,7 @@ angular.module('myApp', ['ngRoute'])
        })
       .when('/projects', {
         templateUrl: 'templates/projects.html',
-        controller: 'ResumeController'
+        controller: 'ProjectsController'
       })
       .when('/resume', {
         templateUrl: 'templates/partial2.html',
