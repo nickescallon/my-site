@@ -1,5 +1,5 @@
 angular.module('myApp')
-  .service('imgSvc', function() {
+  .service('imageSvc', function() {
     this.images = [
       {title: 'ammo.io', url: 'images/square/ammo_square.png'},
       {title: 'Acompli Dashboard', url: 'images/square/acompli_square.png'},
