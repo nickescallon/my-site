@@ -1,13 +1,5 @@
-@media (min-width: 320px){
-  html{
-    font-size:3px;
-  }
-}
-
-@media (min-width: 600px){
-  html{
-    font-size: 5px;    
-  }
+html {
+    font-size:5px;
 }
 
 body {
@@ -16,16 +8,16 @@ body {
 }
 
 img {
-  height: 20em;
-  width: 20em;
+ /* height: 20em;*/
+  width: 60%;
   -webkit-transition: 2s;
   border: 1px solid white;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
 }
 
 img:hover {
-  -webkit-transform: scale(2);
-  -webkit-transition: 2s;
+  -webkit-transform: scale(1.1);
+  -webkit-transition: 1s;
 }
 
 a {
@@ -53,6 +45,8 @@ a:hover {
   height: 90vh;
   width: 100vw;
   background: black;
+  overflow-y: scroll;
+  text-align: center;
 }
 
 #menu {
@@ -78,4 +72,22 @@ article {
   color: white;
   text-align: center;
   font-size: 4rem;
+}
+
+.project {
+
+}
+
+@media only screen and (min-width : 320px) and (max-width : 568px){
+  html{
+    font-size: 3px;    
+  }
+
+  img {
+    width: 100%;
+  }
+
+  img:hover {
+     -webkit-transform: none;
+  }
 }
