@@ -4,5 +4,5 @@ angular.module('myApp')
       $anchorScroll();
       $location.hash('');
 
-    $scope.images = imgSvc.images;
+    $scope.images = imageSvc.images;
   });
